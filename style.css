@@ -1,0 +1,125 @@
+/* Font Imports */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+/* Reset */
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+	/* colors primary */
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+
+	/* colors neutral */
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+	font-size: 15px;
+
+	background-color: var(--very-light-gray);
+	/* font-family: "Big Shoulders Display", cursive;
+	font-family: "Lexend Deca", sans-serif; */
+}
+
+.main {
+	/* background-color: blue; */
+	/* background-color: var(--very-light-gray); */
+	/* height: 100vh; */
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2em 1em;
+}
+
+/* Typography */
+h2 {
+	font-family: "Big Shoulders Display", cursive;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: var(--very-light-gray);
+}
+
+p {
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 400;
+	color: var(--transparent-white);
+	line-height: 1.5;
+}
+a {
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+/* Layout */
+
+#sedans {
+	background-color: var(--bright-orange);
+	/* border-radius: 5px 5px 0 0; */
+}
+
+#suvs {
+	background-color: var(--dark-cyan);
+}
+
+#luxury {
+	background-color: var(--very-dark-cyan);
+	/* border-radius: 0 0 5px 5px; */
+}
+
+img {
+	width: 50px;
+}
+.section {
+	padding: 2em;
+}
+
+/* Padding and Spacing */
+
+h2,
+a {
+	margin: 1em 0;
+}
+
+.text {
+	margin-bottom: 3em;
+}
+
+a {
+	background-color: var(--very-light-gray);
+	padding: 0.75em 2em;
+	border-radius: 50px;
+}
+
+/* Active States */
+a:hover {
+	border: 2px solid var(--very-light-gray);
+	background-color: transparent;
+	color: var(--very-light-gray) !important;
+}
+
+/* Responsive Layout */
+@media screen and (min-width: 500px) {
+	.grid {
+		width: 70%;
+		background-color: red;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
