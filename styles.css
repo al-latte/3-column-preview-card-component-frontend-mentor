@@ -25,33 +25,12 @@
 	--very-light-gray: hsl(0, 0%, 95%);
 }
 
-body {
-	font-size: 15px;
-
-	background-color: var(--very-light-gray);
-	/* font-family: "Big Shoulders Display", cursive;
-	font-family: "Lexend Deca", sans-serif; */
-}
-
-.main {
-	/* background-color: blue; */
-	/* background-color: var(--very-light-gray); */
-	/* height: 100vh; */
-	width: 90%;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 2em 1em;
-}
-
 /* Typography */
 h2 {
 	font-family: "Big Shoulders Display", cursive;
 	font-weight: 700;
 	text-transform: uppercase;
-	font-size: 30px;
+	font-size: 40px;
 	color: var(--very-light-gray);
 }
 
@@ -59,7 +38,7 @@ p {
 	font-family: "Lexend Deca", sans-serif;
 	font-weight: 400;
 	color: var(--transparent-white);
-	line-height: 1.5;
+	line-height: 2;
 }
 a {
 	font-family: "Lexend Deca", sans-serif;
@@ -67,11 +46,27 @@ a {
 	text-decoration: none;
 }
 
+body {
+	font-size: 15px;
+	min-height: 100vh;
+	background-color: var(--very-light-gray);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main {
+	display: flex;
+	width: 65%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
 /* Layout */
 
 #sedans {
 	background-color: var(--bright-orange);
-	/* border-radius: 5px 5px 0 0; */
 }
 
 #suvs {
@@ -80,17 +75,17 @@ a {
 
 #luxury {
 	background-color: var(--very-dark-cyan);
-	/* border-radius: 0 0 5px 5px; */
 }
 
 img {
-	width: 50px;
-}
-.section {
-	padding: 2em;
+	max-width: 100%;
 }
 
 /* Padding and Spacing */
+
+.section {
+	padding: 2.5em 2em 3.5em 2.5em;
+}
 
 h2,
 a {
@@ -98,7 +93,7 @@ a {
 }
 
 .text {
-	margin-bottom: 3em;
+	margin-bottom: 8em;
 }
 
 a {
@@ -115,11 +110,50 @@ a:hover {
 }
 
 /* Responsive Layout */
-@media screen and (min-width: 500px) {
-	.grid {
-		width: 70%;
-		background-color: red;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+/* Mobile Phones */
+@media screen and (max-width: 575px) {
+	.main {
+		display: flex;
+		flex-direction: column;
+		margin: 3em auto;
+		min-width: 80%;
+	}
+
+	.text {
+		margin-bottom: 4em;
+	}
+}
+
+/* Tablets*/
+@media screen and (min-width: 575px) and (max-width: 768px) {
+	.main {
+		display: flex;
+		flex-direction: column;
+		margin: 3em auto;
+		min-width: 80%;
+	}
+
+	.text {
+		margin-bottom: 4em;
+	}
+}
+
+/* Desktops and laptops */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	.main {
+		display: flex;
+		flex-direction: row;
+		margin: 3em auto;
+		min-width: 85%;
+	}
+}
+
+/* Bigger screens */
+@media screen and (min-width: 1439px) {
+	.main {
+		display: flex;
+		flex-direction: row;
+		margin: 3em auto;
+		max-width: 65%;
 	}
 }
